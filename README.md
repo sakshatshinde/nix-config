@@ -1,5 +1,7 @@
 # My NixOS config0 
 
+Refer https://wiki.archlinux.org/title/wpa_supplicant for wireless install
+
 ```sh
 $ cp /etc/nixos/hardware-configuration.nix .
 ```
