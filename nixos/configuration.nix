@@ -67,7 +67,7 @@
   # Networking
   networking.hostName = "nixos";
   # networking.wireless.enable = true;
-  networking.networkmanager.enable = "true";
+  networking.networkmanager.enable = true;
 
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
