@@ -1,4 +1,8 @@
-# My NixOS config
+# My NixOS config0 
+
+```sh
+$ cp /etc/nixos/hardware-configuration.nix .
+```
 
 ```bash
 $ nix-shell -p git
