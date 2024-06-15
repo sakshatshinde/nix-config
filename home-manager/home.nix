@@ -53,8 +53,13 @@
     micro
     wpa_supplicant
     wget
+    wireplumber
+    xdg-desktop-portal
  ];
 
+  # Hyperland
+  wayland.windowManager.hyperland.enable = true;
+  
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
