@@ -66,21 +66,30 @@
 
   # Bootloader == systemd
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = true; 
 
   # Networking
   networking.hostName = "nixos";
+  networking.wireless.enable = true;
+  networking.wireless.networks.Sub2GhzAlderlake.psk = "99sakshatshinde";
+  # networking.networkmanager.enable = true;
   
-  # If you want to use wpa_cli / wpa_supplicant
-  # networking.wireless.enable = true;
-  # networking.wireless.networks.<SSID>.psk = <psk>;
-
-  # via NetoworkManager nmcli
-  networking.networkmanager.enable = true;
-
+  # Intel GPU Drivers
+  hardware.opengl = {
+   enable = true;  
+   extraPackages = with pkgs; [
+    intel-media-driver
+    # intel-vaapi-driver
+    libvdpau-va-gl
+   ];
+  }; 
+ 
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
   i18n.defaultLocale = "en_IN";
+  
+  # Polkit 
+  security.polkit.enable = true;
 
   # Configure keymap X11
   services.xserver =  {
