@@ -59,14 +59,23 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
-  # Bootloader
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  # Bootloader == Grub
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.device = "/dev/sda";
+  # boot.loader.grub.useOSProber = true;
+
+  # Bootloader == systemd
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
   networking.hostName = "nixos";
+  
+  # If you want to use wpa_cli / wpa_supplicant
   # networking.wireless.enable = true;
+  # networking.wireless.networks.<SSID>.psk = <psk>;
+
+  # via NetoworkManager nmcli
   networking.networkmanager.enable = true;
 
   # Locale and stuff
