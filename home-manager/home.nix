@@ -48,6 +48,7 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
     steam
+    neofetch
     cpufetch
     discord
     micro
@@ -56,10 +57,18 @@
     wireplumber
     xdg-desktop-portal
     dunst
+    firefox
+    chromium
+    rofi
+    waybar
+    alacritty
  ];
 
   # Hyperland
-  wayland.windowManager.hyperland.enable = true;
+  # wayland.windowManager.hyprland.enable = true;
+  
+  # Sway
+  wayland.windowManager.sway.enable = true;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
@@ -67,7 +76,14 @@
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
-
+  
+  # Environment
+  home.sessionVariables = {
+    EDITOR = "micro";
+    BROWSER = "firefox";
+    TERMINAL = "alacritty";
+  };
+  
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "24.05";
 }
