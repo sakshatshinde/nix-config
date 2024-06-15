@@ -14,6 +14,8 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    ./config/alacritty.nix
+    ./config/waybar.nix
   ];
 
   nixpkgs = {
@@ -47,21 +49,32 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
+    # apps
     steam
-    neofetch
-    cpufetch
     discord
+    mpv
+    firefox
+    chromium
+
+    # utils
+    cpufetch
+    neofetch
     micro
     wpa_supplicant
     wget
+    pipewire
     wireplumber
     xdg-desktop-portal
     dunst
-    firefox
-    chromium
-    rofi
-    waybar
-    alacritty
+    bemenu
+
+    # Declared in config
+    # alacritty
+    # waybar
+
+    # Fonts
+    jetbrains-mono
+    nerdfonts
  ];
 
   # Hyperland
