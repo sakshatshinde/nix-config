@@ -55,11 +55,12 @@
     wget
     wireplumber
     xdg-desktop-portal
+    dunst
  ];
 
   # Hyperland
   wayland.windowManager.hyperland.enable = true;
-  
+
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
