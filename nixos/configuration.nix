@@ -71,7 +71,7 @@
   # Networking
   networking.hostName = "nixos";
   networking.wireless.enable = true;
-  networking.wireless.networks.Sub2GhzAlderlake.psk = "99sakshatshinde";
+  networking.wireless.networks.Sub2GhzAlderlake.psk = "<psk>";
   # networking.networkmanager.enable = true;
   
   # Intel GPU Drivers
