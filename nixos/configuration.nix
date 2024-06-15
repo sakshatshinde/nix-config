@@ -60,13 +60,13 @@
   };
 
   # Bootloader
-  boot.loader.grub.enable = "true";
+  boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
   # Networking
   networking.hostName = "nixos";
-  # networking.wireless.enable = "true";
+  # networking.wireless.enable = true;
   networking.networkmanager.enable = "true";
 
   # Locale and stuff
