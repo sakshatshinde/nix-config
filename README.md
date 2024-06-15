@@ -1,4 +1,4 @@
-# My NixOS config0 
+# My NixOS config
 
 Refer https://wiki.archlinux.org/title/wpa_supplicant for wireless install
 
