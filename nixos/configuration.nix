@@ -96,7 +96,7 @@
   };
 
   # house-keeping
-  nix.optimise.automatic = true
+  nix.optimise.automatic = true;
   # nix.optimise.dates = [ "03:45" ]; # everyday at 03:45
   nix.gc = {
     automatic = true;
