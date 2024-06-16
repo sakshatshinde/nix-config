@@ -67,6 +67,12 @@
     xdg-desktop-portal
     dunst
     bemenu
+    eza
+    .fd
+
+    # dev
+    rustup
+    
 
     # Declared in config
     # alacritty
