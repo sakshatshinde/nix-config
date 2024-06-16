@@ -60,7 +60,7 @@
     cpufetch
     neofetch
     micro
-    #wpa_supplicant
+    wl-clipboard
     clipse
     wget
     pipewire
@@ -68,7 +68,6 @@
     xdg-desktop-portal
     dunst
     wofi
-    # bemenu
     eza
     fd
     kitty
