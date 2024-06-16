@@ -87,7 +87,23 @@
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
   i18n.defaultLocale = "en_IN";
-  
+
+  # ENV varibales
+  environment.sessionVariables = {
+    TERMINAL = "alacritty";
+    EDITOR = "micro";
+    BROWSER = "firefox";
+  };
+
+  # house-keeping
+  nix.optimise.automatic = true
+  # nix.optimise.dates = [ "03:45" ]; # everyday at 03:45
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   # Polkit 
   security.polkit.enable = true;
 
