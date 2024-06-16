@@ -95,14 +95,14 @@
     BROWSER = "firefox";
   };
 
-  # house-keeping
+  # house-keeping on by default
   # nix.optimise.automatic = true;
   # nix.optimise.dates = [ "03:45" ]; # everyday at 03:45
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
+  # nix.gc = {
+  #  automatic = true;
+  #  dates = "weekly";
+  #  options = "--delete-older-than 30d";
+  # };
 
   # Polkit 
   security.polkit.enable = true;
