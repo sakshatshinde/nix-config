@@ -66,11 +66,6 @@
 
   key_bindings = [
     { 
-      key = "C";
-      mods = "Control | Shift"; 
-      chars = "\\x03"; 
-    }
-    { 
       key = "C"; 
       mods = "Control"; 
       action = "Copy"; 
