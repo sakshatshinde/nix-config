@@ -60,7 +60,8 @@
     cpufetch
     neofetch
     micro
-    wpa_supplicant
+    #wpa_supplicant
+    clipse
     wget
     pipewire
     wireplumber
