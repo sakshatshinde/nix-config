@@ -68,11 +68,10 @@
     dunst
     bemenu
     eza
-    .fd
+    fd
 
     # dev
     rustup
-    
 
     # Declared in config
     # alacritty
@@ -96,12 +95,15 @@
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
   
-  # Environment
-  home.sessionVariables = {
-    EDITOR = "micro";
-    BROWSER = "firefox";
-    TERMINAL = "alacritty";
-  };
+  # Environment BROKEN https://www.reddit.com/r/NixOS/comments/1bbfv02/unable_to_change_environment_variables_with/
+  # For now using environment.sessionVariables in base configuration
+  # home.sessionVariables = {
+  #    EDITOR = "micro";
+  #    BROWSER = "firefox";
+  #    TERMINAL = "alacritty";
+  #};  
+
+  
   
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "24.05";
