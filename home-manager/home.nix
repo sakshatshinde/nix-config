@@ -66,9 +66,11 @@
     wireplumber
     xdg-desktop-portal
     dunst
-    bemenu
+    wofi
+    # bemenu
     eza
     fd
+    kitty
 
     # dev
     rustup
@@ -82,11 +84,11 @@
     nerdfonts
  ];
 
-  # Hyperland
+  # Hyperland -- defining it in home-manager generates a blank .config/hypr/hyprland.conf -- so declared in configuration.nix instead
   # wayland.windowManager.hyprland.enable = true;
-  
+
   # Sway
-  wayland.windowManager.sway.enable = true;
+  # wayland.windowManager.sway.enable = true;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
@@ -94,17 +96,17 @@
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
-  
+
   # Environment BROKEN https://www.reddit.com/r/NixOS/comments/1bbfv02/unable_to_change_environment_variables_with/
   # For now using environment.sessionVariables in base configuration
   # home.sessionVariables = {
   #    EDITOR = "micro";
   #    BROWSER = "firefox";
   #    TERMINAL = "alacritty";
-  #};  
+  #};
 
-  
-  
+
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "24.05";
 }

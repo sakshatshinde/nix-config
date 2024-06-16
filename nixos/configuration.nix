@@ -59,31 +59,28 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
-  # Bootloader == Grub
-  # boot.loader.grub.enable = true;
-  # boot.loader.grub.device = "/dev/sda";
-  # boot.loader.grub.useOSProber = true;
-
   # Bootloader == systemd
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true; 
+  boot.loader.efi.canTouchEfiVariables = true;
 
-  # Networking
-  networking.hostName = "nixos";
-  networking.wireless.enable = true;
-  networking.wireless.networks.Sub2GhzAlderlake.psk = "<psk>";
-  # networking.networkmanager.enable = true;
+  # Networking via wpa_supplicant
+  # networking.hostName = "nixos";
+  # networking.wireless.enable = true;
+  # networking.wireless.networks.<SSID>.psk = "<psk>";
   
+  # Networking via nmcli
+  networking.networkmanager.enable = true;
+
   # Intel GPU Drivers
   hardware.opengl = {
-   enable = true;  
+   enable = true;
    extraPackages = with pkgs; [
     intel-media-driver
     # intel-vaapi-driver
     libvdpau-va-gl
    ];
-  }; 
- 
+  };
+
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
   i18n.defaultLocale = "en_IN";
@@ -95,17 +92,11 @@
     BROWSER = "firefox";
   };
 
-  # house-keeping on by default
-  # nix.optimise.automatic = true;
-  # nix.optimise.dates = [ "03:45" ]; # everyday at 03:45
-  # nix.gc = {
-  #  automatic = true;
-  #  dates = "weekly";
-  #  options = "--delete-older-than 30d";
-  # };
-
-  # Polkit 
+  # Polkit
   security.polkit.enable = true;
+
+  # Hyprland
+  programs.hyprland.enable = true;
 
   # Configure keymap X11
   services.xserver =  {

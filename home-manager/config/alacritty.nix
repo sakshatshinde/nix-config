@@ -29,7 +29,6 @@
 
   size = 9;
   builtin_box_drawing = true;
-  draw_bold_text_with_bright_colors = false;
   };
 
   colors = {
@@ -64,7 +63,7 @@
 
   live_config_reload = true;
 
-  key_bindings = [
+  keyboard.bindings = [
     { 
       key = "C"; 
       mods = "Control"; 
