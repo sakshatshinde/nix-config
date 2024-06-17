@@ -58,7 +58,7 @@
 
     # utils
     cpufetch
-    neofetch
+    fastfetch
     micro
     wl-clipboard
     clipse
@@ -66,6 +66,7 @@
     pipewire
     wireplumber
     xdg-desktop-portal
+    networkmanagerapplet
     dunst
     wofi
     eza
