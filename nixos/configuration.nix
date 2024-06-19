@@ -92,13 +92,12 @@
     BROWSER = "firefox";
   };
 
-  # Polkit
+  programs.git.enable = true;
+
+  # Polkit - required for hyprland
   security.polkit.enable = true;
 
-  # Hyprland
   programs.hyprland.enable = true;
-
-  # Gamemode
   programs.gamemode.enable = true;
 
   # Bluetooth
