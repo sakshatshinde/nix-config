@@ -97,17 +97,6 @@
   # Enable home-manager
   programs.home-manager.enable = true;
 
-  programs.git = {
-      enable = true;
-      userName  = "sakshatshinde";
-      userEmail = "shindesakshat@gmail.com";
-      extraConfig = {
-        credential.helper = "${
-            pkgs.git.override { withLibsecret = true; }
-          }/bin/git-credential-libsecret";
-        };
-    };
-
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
