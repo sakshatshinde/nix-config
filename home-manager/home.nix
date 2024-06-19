@@ -67,6 +67,7 @@
     wireplumber
     xdg-desktop-portal
     networkmanagerapplet
+    blueman-applet
     dunst
     wofi
     eza
