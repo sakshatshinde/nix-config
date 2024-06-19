@@ -70,10 +70,11 @@
     blueman
     dunst
     wofi
-    eza
     fd
-    kitty
-
+    btop
+    grim
+    slurp
+    
     # dev
     rustup
 
