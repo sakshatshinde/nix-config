@@ -74,6 +74,7 @@
     kate
     dolphin
     kdePackages.breeze-icons
+    brightnessctl
 
     # dev
     rustup
