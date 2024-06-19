@@ -73,6 +73,7 @@
     slurp
     kate
     dolphin
+    kdePackages.breeze-icons
 
     # dev
     rustup
