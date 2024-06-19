@@ -5,7 +5,7 @@ Refer https://wiki.archlinux.org/title/wpa_supplicant for wireless install
 or use nmcli
 
 ```sh
-nmcli dev wifi connect <mySSID> password <myPassword
+$ nmcli dev wifi connect <mySSID> password <myPassword
 ```
 
 ```sh
