@@ -11,8 +11,8 @@
       "eDP-1"
     ];
 
-    modules-left = [ "custom/logo" ];
-    modules-right = [ "cpu" "memory" "network" "clock" "battery" ];
+    modules-left = [ "custom/logo" "clock"];
+    modules-right = [ "cpu" "network" "battery" ];
     modules-center = [ "hyprland/workspaces" ];
     
     "custom/logo" = {
@@ -21,15 +21,30 @@
     };
 
     "hyprland/workspaces" = {};
-    
-    "clock" = {
-      interval = 60;
-      format = "{󰥔   {:%H:%M}}";
+
+    "memory" = {
+    	interval = "2";
+    	format = "RAM: {usage}GiB |";	
     };
 
+    "cpu" =  {
+            interval = "1";     
+            format =  "❤️ {max_frequency}GHz | {usage}%";
+            max-length =  13;
+            min-length =  13;
+            # on-click = "alacritty -e htop --sort-key PERCENT_CPU";
+            tooltip = false;
+        };
+        
+	"network" = {
+	                format = "  ";
+	                format-ethernet = "  ";
+	                tooltip = false;
+	          };
+	          
     "battery" = {
-          format = "{icon}    {capacity}%";
-          format-charging = "     {capacity}%";
+          format = "{icon}   {capacity}%";
+          format-charging = "⚡{capacity}%";
           format-icons = [
             ""
             ""
@@ -73,16 +88,14 @@
     margin-right: 10px;
     color: #ffffff;
   }
+  
   #workspaces button:hover, #workspaces button:active {
     background-color: #292828;
     color: #ffffff;
   }
+  
   #workspaces button.focused {
     background-color: #383737;
-  }
-
-  #language {
-    margin-right: 7px;		
   }
 
   #battery {
