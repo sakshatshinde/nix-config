@@ -1,5 +1,6 @@
 {config, pkgs, ...}:
 {
+  # https://github.com/alacritty/alacritty-theme/tree/master/themes
   programs.alacritty.enable = true;
   
   programs.alacritty.settings = {
@@ -27,14 +28,15 @@
       style = "Regular";
     };
 
-  size = 9;
+  size = 12;
+
   builtin_box_drawing = true;
   };
 
   colors = {
     primary = {
-      background = "#111111";
-      foreground = "#ffffff";
+      background = "#181818";
+      foreground = "#b9b9b9";
     };
 
     cursor = {
@@ -48,14 +50,14 @@
     };
   
     normal = {
-      black = "#111111";
-      red = "#d40b0e";
-      green = "#52ff80";
-      yellow = "#fff642";
-      blue = "#1a93c7";
-      magenta = "#db1d00";
-      cyan = "#5ae8e1";
-      white = "#ffffff";
+      black = "#3b3b3b";
+      red = "#ed4a46";
+      green = "#70b433";
+      yellow = "#dbb32d";
+      blue = "#368aeb";
+      magenta = "#eb6eb7";
+      cyan = "#3fc5b7";
+      white = "#b9b9b9";
     };
 
     transparent_background_colors = true;
