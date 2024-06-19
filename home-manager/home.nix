@@ -89,6 +89,12 @@
     # Fonts
     jetbrains-mono
     nerdfonts
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
  ];
 
   # Hyperland -- defining it in home-manager generates a blank .config/hypr/hyprland.conf -- so declared in configuration.nix instead
