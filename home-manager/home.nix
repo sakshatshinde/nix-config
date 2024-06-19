@@ -53,7 +53,10 @@
     steam
     discord
     firefox
-    chromium
+    brave
+    qbittorrent
+    spotify
+    spicetify-cli
 
     # utils
     cpufetch
