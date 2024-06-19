@@ -98,6 +98,9 @@
   # Hyprland
   programs.hyprland.enable = true;
 
+  # Gamemode
+  programs.gamemode.enable = true;
+
   # Configure keymap X11
   services.xserver =  {
     layout = "us";
