@@ -52,7 +52,6 @@
     # apps
     steam
     discord
-    mpv
     firefox
     chromium
 
@@ -63,8 +62,6 @@
     wl-clipboard
     clipse
     wget
-    pipewire
-    wireplumber
     xdg-desktop-portal
     networkmanagerapplet
     blueman
@@ -74,7 +71,8 @@
     btop
     grim
     slurp
-    
+    kate
+
     # dev
     rustup
 
