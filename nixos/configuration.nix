@@ -62,6 +62,10 @@
   # Bootloader == systemd
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.plymouth.enable = true;
+  boot.plymouth.theme = "bgrt";
+  boot.initrd.verbose = false;
+  boot.consoleLogLevel = 0; 
 
   # Networking via wpa_supplicant
   # networking.hostName = "nixos";
