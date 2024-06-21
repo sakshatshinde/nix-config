@@ -1,4 +1,3 @@
-==> (lesspipe 2.11) append :: to filename to view the original utf-8 encoded file
 {config, pkgs, ...}:
 {
   programs.waybar.enable = true;
@@ -17,7 +16,7 @@
     modules-center = [ "hyprland/workspaces" ];
 
     "bluetooth" = {
-      format = " {status}";
+      format = "   {status}";
       format-disabled = "";
       format-connected = "   {num_connections}";
     };
