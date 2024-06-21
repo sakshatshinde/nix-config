@@ -56,7 +56,6 @@
     brave
     qbittorrent
     spotify
-    spicetify-cli
 
     # utils
     cpufetch
@@ -78,6 +77,7 @@
     dolphin
     kdePackages.breeze-icons
     brightnessctl
+    gammastep
 
     # dev
     rustup
