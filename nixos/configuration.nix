@@ -114,6 +114,7 @@
 
   programs.hyprland.enable = true;
   programs.gamemode.enable = true;
+  programs.gammastep.enable = true;
 
   # Bluetooth
   hardware.bluetooth.enable = true;
