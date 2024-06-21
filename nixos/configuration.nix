@@ -80,7 +80,7 @@
    enable = true;
    driSupport = true;
    driSupport32Bit = true;
-   
+
    extraPackages = with pkgs; [
     intel-media-driver
     intel-media-sdk
@@ -98,12 +98,6 @@
     TERMINAL = "alacritty";
     EDITOR = "micro";
     BROWSER = "firefox";
-  };
-
-  programs.git = {
-    enable = true;
-    userName  = "sakshatshinde";
-    userEmail = "shindesakshat@gmail.com";
   };
 
   # Polkit - required for hyprland
