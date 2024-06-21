@@ -75,6 +75,13 @@
   # Networking via nmcli
   networking.networkmanager.enable = true;
 
+  # Ram cope
+  swapDevices = [{
+    device = "/swapfile";
+    size = 16 * 1024;
+  }];
+  zramSwap.enable = true;
+
   # Intel GPU Drivers
   hardware.opengl = {
    enable = true;
