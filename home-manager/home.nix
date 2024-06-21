@@ -56,6 +56,7 @@
     brave
     qbittorrent
     spotify
+    mpv
 
     # utils
     cpufetch
@@ -96,6 +97,10 @@
     fira-code
     fira-code-symbols
  ];
+
+  # mpv
+  xdg.configFile."mpv/mpv.conf".source = /home/sakshat/.config/mpv/mpv.conf;
+  xdg.configFile."mpv/input.conf".source = /home/sakshat/.config/mpv/input.conf;
 
   # Hyperland -- defining it in home-manager generates a blank .config/hypr/hyprland.conf -- so declared in configuration.nix instead
   # wayland.windowManager.hyprland.enable = true;
