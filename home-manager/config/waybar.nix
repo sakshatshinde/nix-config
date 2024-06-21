@@ -1,3 +1,4 @@
+==> (lesspipe 2.11) append :: to filename to view the original utf-8 encoded file
 {config, pkgs, ...}:
 {
   programs.waybar.enable = true;
@@ -18,9 +19,7 @@
     "bluetooth" = {
       format = " {status}";
       format-disabled = "";
-      format-connected = " {num_connections}";
-      tooltip-format = "{device_enumerate}";
-      tooltip-format-enumerate-connected = "{device_alias}   {device_address}";
+      format-connected = "   {num_connections}";
     };
     
     "custom/logo" = {
@@ -45,7 +44,7 @@
 
     "cpu" =  {
             interval = "1";     
-            format =  "❤️ {max_frequency}GHz  {usage}%";
+            format =  "❤️ {max_frequency}GHz";
             max-length =  13;
             min-length =  13;
             # on-click = "alacritty -e htop --sort-key PERCENT_CPU";
@@ -83,7 +82,8 @@
     border-radius: 0;
     padding: 0;
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
+    color: #11111b;    
   }
 
   window#waybar {
@@ -98,16 +98,17 @@
     margin-right: 12px;
     padding: 0;
     font-family: Fira Code;
+    color: #11111b;
   }
   
   #workspaces button {
-    background: #11111b;
-    color: #b4befe;
+    color: #11111b;
   }
 
   #battery {
     margin-left: 7px;
-    margin-right: 3px;
+    margin-right: 5px;
+    color: #11111b;   
   }
   '';
 }
