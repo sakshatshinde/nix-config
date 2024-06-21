@@ -65,7 +65,9 @@
   boot.plymouth.enable = true;
   boot.plymouth.theme = "bgrt";
   boot.initrd.verbose = false;
-  boot.consoleLogLevel = 0; 
+  boot.consoleLogLevel = 0;
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Networking via wpa_supplicant
   # networking.hostName = "nixos";
