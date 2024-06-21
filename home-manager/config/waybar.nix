@@ -11,16 +11,33 @@
       "eDP-1"
     ];
 
-    modules-left = [ "custom/logo" "clock"];
+    modules-left = [ "custom/logo" "clock" "bluetooth"];
     modules-right = [ "cpu" "network" "battery" ];
     modules-center = [ "hyprland/workspaces" ];
+
+    "bluetooth" = {
+      format = " {status}";
+      format-disabled = ""; // an empty format will hide the module
+      format-connected = " {num_connections}";
+      tooltip-format = "{device_enumerate}";
+      tooltip-format-enumerate-connected = "{device_alias}   {device_address}";
+    };
     
     "custom/logo" = {
       format = "";
       tooltip = false;
     };
 
-    "hyprland/workspaces" = {};
+    "hyprland/workspaces" = {
+      format = "{name}";
+      format = "{icon}";
+      tooltip = false;
+      all-outputs = true;
+      format-icons = {
+        active =  "";
+        default = "";
+      }
+    };
 
     "memory" = {
     	interval = "2";
@@ -29,7 +46,7 @@
 
     "cpu" =  {
             interval = "1";     
-            format =  "❤️ {max_frequency}GHz | {usage}%";
+            format =  "❤️ {max_frequency}GHz  {usage}%";
             max-length =  13;
             min-length =  13;
             # on-click = "alacritty -e htop --sort-key PERCENT_CPU";
@@ -71,7 +88,7 @@
   }
 
   window#waybar {
-    background: #292828;
+    background: #b4befe;
     color: #ffffff;
   }
   
@@ -81,21 +98,12 @@
     margin-left: 7px;
     margin-right: 12px;
     padding: 0;
-    font-family: NotoSans Nerd Font Mono;
+    font-family: Fira Code;
   }
   
   #workspaces button {
-    margin-right: 10px;
-    color: #ffffff;
-  }
-  
-  #workspaces button:hover, #workspaces button:active {
-    background-color: #292828;
-    color: #ffffff;
-  }
-  
-  #workspaces button.focused {
-    background-color: #383737;
+    background: #11111b;
+    color: #b4befe;
   }
 
   #battery {
