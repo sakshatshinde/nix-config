@@ -98,9 +98,9 @@
     fira-code-symbols
  ];
 
-  # mpv
-  xdg.configFile."mpv/mpv.conf".source = /home/sakshat/.config/mpv/mpv.conf;
-  xdg.configFile."mpv/input.conf".source = /home/sakshat/.config/mpv/input.conf;
+  # mpv config the non-nix way cause lazy
+  home.file.".config/mpv/mpv.conf".source = ./config/mpv/mpv.conf;
+  home.file.".config/mpv/input.conf".source = ./config/mpv/input.conf;
 
   # Hyperland -- defining it in home-manager generates a blank .config/hypr/hyprland.conf -- so declared in configuration.nix instead
   # wayland.windowManager.hyprland.enable = true;
