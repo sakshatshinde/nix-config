@@ -97,7 +97,11 @@
     BROWSER = "firefox";
   };
 
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userName  = "sakshatshinde";
+    userEmail = "shindesakshat@gmail.com";
+  };
 
   # Polkit - required for hyprland
   security.polkit.enable = true;
