@@ -17,7 +17,7 @@
 
     "bluetooth" = {
       format = " {status}";
-      format-disabled = ""; // an empty format will hide the module
+      format-disabled = "";
       format-connected = " {num_connections}";
       tooltip-format = "{device_enumerate}";
       tooltip-format-enumerate-connected = "{device_alias}   {device_address}";
@@ -29,14 +29,13 @@
     };
 
     "hyprland/workspaces" = {
-      format = "{name}";
       format = "{icon}";
       tooltip = false;
       all-outputs = true;
       format-icons = {
         active =  "";
         default = "";
-      }
+      };
     };
 
     "memory" = {
