@@ -51,7 +51,8 @@
   home.packages = with pkgs; [
     # apps
     steam
-    discord
+    # discord
+    Vesktop
     firefox
     brave
     qbittorrent
