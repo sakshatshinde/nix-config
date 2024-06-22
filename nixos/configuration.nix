@@ -37,6 +37,15 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
+      
+      # Enable all firmwares mostly for battery life
+      hardware.enableAllFirmware = true;
+      hardware.cpu.intel.updateMicrocode = true;
+      hardware.enableRedistributableFirmware = true;
+      hardware.firmware = with pkgs; [ firmwareLinuxNonfree ];
+      
+      # Enable firmware update service
+      services.fwupd.enable = true;
     };
   };
 
@@ -117,9 +126,6 @@
     libvdpau-va-gl
    ];
   };
-
-  # Enable all firmwares mostly for battery life
-  hardware.enableAllFirmware = true;
 
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
