@@ -82,6 +82,11 @@
 
     # dev
     rustup
+    jetbrains.rust-rover
+    programs.vscode = {
+      enable = true;
+      package = pkgs.vscode.fhs;
+    };
 
     # Declared in config
     # alacritty
