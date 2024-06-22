@@ -51,7 +51,6 @@
   home.packages = with pkgs; [
     # apps
     steam
-    # discord
     vesktop
     firefox
     brave
