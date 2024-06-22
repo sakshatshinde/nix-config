@@ -121,6 +121,18 @@
     enable = true;
     userName  = "sakshatshinde";
     userEmail = "shindesakshat@gmail.com";
+
+    aliases = {
+    	a = "add -p";
+		# expects your private key with usr perms 600 in ~/Keys dir named "github"
+		# use with GIT_SSH_COMMAND='ssh -i ~/Keys/github -o IdentitiesOnly=yes'
+    	ps = "push";
+    	p = "pull";
+    	cm = "commit -m";
+    	f = "fetch";
+    	fo = "fetch origin";
+    	st = "status";	
+    };
   };
 
   programs.vscode = {
