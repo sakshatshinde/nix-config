@@ -107,7 +107,7 @@
 
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
-  i18n.defaultLocale = "en_IN";
+  i18n.defaultLocale = "en_IN/UTF-8";
 
   # ENV varibales
   environment.sessionVariables = {
