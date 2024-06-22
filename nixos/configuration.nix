@@ -121,7 +121,6 @@
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.supportedLocales = [ "en_US.UTF-8/UTF-8" ];
   i18n.extraLocaleSettings = {
     LC_MONETARY = "en_US.UTF-8";
     LC_MESSAGES = "en_US.UTF-8";
