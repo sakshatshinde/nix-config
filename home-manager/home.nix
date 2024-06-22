@@ -52,7 +52,7 @@
     # apps
     steam
     # discord
-    Vesktop
+    vesktop
     firefox
     brave
     qbittorrent
@@ -75,13 +75,17 @@
     btop
     grim
     slurp
-    kate
+    cosmic-edit
+    cosmic-files
     dolphin
     kdePackages.breeze-icons
     kdePackages.ark
     brightnessctl
     gammastep
-
+    powertop
+    swaybg
+    waypaper
+        
     # dev
     rustup
     jetbrains.rust-rover
