@@ -118,6 +118,9 @@
    ];
   };
 
+  # Enable all firmwares mostly for battery life
+  hardware.enableAllFirmware = true;
+
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
   i18n.defaultLocale = "en_US.UTF-8";
