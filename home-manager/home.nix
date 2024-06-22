@@ -16,6 +16,7 @@
     # ./nvim.nix
     ./config/alacritty.nix
     ./config/waybar.nix
+    ./config/tofi.nix
   ];
 
   nixpkgs = {
@@ -69,7 +70,6 @@
     networkmanagerapplet
     blueman
     dunst
-    wofi
     fd
     btop
     grim
@@ -83,7 +83,6 @@
     gammastep
     powertop
     swaybg
-    waypaper
         
     # dev
     rustup
