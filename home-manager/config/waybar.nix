@@ -82,11 +82,11 @@
     padding: 0;
     margin: 0;
     font-size: 12px;
-    color: #11111b;    
+    color: #b4befe    
   }
 
   window#waybar {
-    background: #b4befe;
+    background: #11111b;
     color: #ffffff;
   }
   
@@ -97,17 +97,17 @@
     margin-right: 12px;
     padding: 0;
     font-family: Fira Code;
-    color: #11111b;
+    color: #b4befe;
   }
   
   #workspaces button {
-    color: #11111b;
+    color: #b4befe;
   }
 
   #battery {
     margin-left: 7px;
     margin-right: 5px;
-    color: #11111b;   
+    color: #b4befe;   
   }
   '';
 }
