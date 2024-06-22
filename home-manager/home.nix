@@ -77,6 +77,7 @@
     kate
     dolphin
     kdePackages.breeze-icons
+    kdePackages.ark
     brightnessctl
     gammastep
 
