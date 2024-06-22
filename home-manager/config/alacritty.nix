@@ -35,8 +35,8 @@
 
   colors = {
     primary = {
-      background = "#181818";
-      foreground = "#b9b9b9";
+      background = "#1e1e2e";
+      foreground = "#cdd6f4";
     };
 
     cursor = {
@@ -50,14 +50,14 @@
     };
   
     normal = {
-      black = "#3b3b3b";
-      red = "#ed4a46";
-      green = "#70b433";
-      yellow = "#dbb32d";
-      blue = "#368aeb";
-      magenta = "#eb6eb7";
-      cyan = "#3fc5b7";
-      white = "#b9b9b9";
+      black = "#45475a";
+      red = "#f38ba8";
+      green = "#a6e3a1";
+      yellow = "#f9e2af";
+      blue = "#89b4fa";
+      magenta = "#f5c2e7";
+      cyan = "#94e2d5";
+      white = "#bac2de";
     };
 
     transparent_background_colors = true;
