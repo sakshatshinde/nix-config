@@ -107,7 +107,11 @@
 
   # Locale and stuff
   time.timeZone = "Asia/Kolkata";
-  i18n.defaultLocale = "en_IN/UTF-8";
+  i18n.defaultLocale = "en_IN.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_MONETARY = "en_US.UTF-8";
+    LC_MESSAGES = "en_US.UTF-8";
+  };
 
   # ENV varibales
   environment.sessionVariables = {
