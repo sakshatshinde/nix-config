@@ -84,10 +84,6 @@
     # dev
     rustup
     jetbrains.rust-rover
-    programs.vscode = {
-      enable = true;
-      package = pkgs.vscode.fhs;
-    };
 
     # Declared in config
     # alacritty
@@ -121,6 +117,11 @@
     enable = true;
     userName  = "sakshatshinde";
     userEmail = "shindesakshat@gmail.com";
+  };
+
+  programs.vscode = {
+      enable = true;
+      package = pkgs.vscode.fhs;
   };
 
   # Nicely reload system units when changing configs
