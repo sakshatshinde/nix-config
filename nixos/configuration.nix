@@ -97,6 +97,8 @@
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
+  # https://github.com/Mic92/envfs
+  services.envfs.enable = true;
 
   # Networking via wpa_supplicant
   # networking.hostName = "nixos";
