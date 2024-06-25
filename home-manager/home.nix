@@ -106,7 +106,11 @@
   # mpv config the non-nix way cause lazy
   home.file.".config/mpv/mpv.conf".source = ./config/mpv/mpv.conf;
   home.file.".config/mpv/input.conf".source = ./config/mpv/input.conf;
-
+  home.file.".config/mpv/fonts/GandhiSans-Regular.otf".source = ./config/mpv/fonts/GandhiSans-Regular.otf;
+  home.file.".config/mpv/fonts/GandhiSans-BoldItalic.otf".source = ./config/mpv/fonts/GandhiSans-BoldItalic.otf;
+  home.file.".config/mpv/fonts/GandhiSans-Italic.otf".source = ./config/mpv/fonts/GandhiSans-Italic.otf;
+  home.file.".config/mpv/fonts/GandhiSans-Bold.otf".source = ./config/mpv/fonts/GandhiSans-Bold.otf;
+  
   # Hyperland -- defining it in home-manager generates a blank .config/hypr/hyprland.conf -- so declared in configuration.nix instead
   # wayland.windowManager.hyprland.enable = true;
 
