@@ -12,8 +12,8 @@
   	background-color = "#1e1e2e";
 
 	outline-width = 0;
-	prompt-text = "exec";
-	placeholder-text = " start typing already...";
+	prompt-text = "";
+	placeholder-text = "app";
   	border-width = "0";
   	
   	hide-cursor = true;	
