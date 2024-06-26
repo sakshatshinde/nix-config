@@ -122,9 +122,9 @@
    driSupport32Bit = true;
 
    extraPackages = with pkgs; [
-    intel-media-driver
-    intel-media-sdk
-    # intel-vaapi-driver
+    #intel-media-driver
+    #intel-media-sdk
+    intel-vaapi-driver
     libvdpau-va-gl
    ];
   };
