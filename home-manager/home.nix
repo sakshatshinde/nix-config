@@ -84,10 +84,6 @@
     powertop
     swaybg
         
-    # dev
-    rustup
-    jetbrains.rust-rover
-
     # Declared in config
     # alacritty
     # waybar
