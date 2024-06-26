@@ -46,6 +46,10 @@
       
       # Enable firmware update service
       services.fwupd.enable = true;
+
+      packageOverrides = pkgs: {
+          intel-vaapi-driver = pkgs.intel-vaapi-driver.override { enableHybridCodec = true; };
+      };
     };
   };
 
