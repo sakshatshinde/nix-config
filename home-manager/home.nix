@@ -53,7 +53,7 @@
     # apps
     steam
     vesktop
-	firefox-beta-bin
+	firefox
     brave
     qbittorrent
     spotify
