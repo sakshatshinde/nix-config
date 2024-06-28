@@ -122,12 +122,11 @@
   # Intel GPU Drivers
   hardware.graphics = {
    enable = true;
-   driSupport32Bit = true;
 
    extraPackages = with pkgs; [
     #intel-media-driver -- bad for browsers both firefox and chrome
     #intel-media-sdk
-    intel-vaapi-driver
+    intel-vaapi-driver # older but better
     libvdpau-va-gl
    ];
   };
