@@ -100,6 +100,10 @@
   # https://github.com/Mic92/envfs
   services.envfs.enable = true;
 
+  # Save some power - https://nixos.wiki/wiki/Laptop
+  services.thermald.enable = true;
+  powerManagement.powertop.enable = true;
+  
   # Networking via wpa_supplicant
   # networking.hostName = "nixos";
   # networking.wireless.enable = true;
@@ -116,12 +120,12 @@
   zramSwap.enable = true;
 
   # Intel GPU Drivers
-  hardware.opengl = {
+  hardware.graphics = {
    enable = true;
    driSupport32Bit = true;
 
    extraPackages = with pkgs; [
-    #intel-media-driver
+    #intel-media-driver -- bad for browsers both firefox and chrome
     #intel-media-sdk
     intel-vaapi-driver
     libvdpau-va-gl
