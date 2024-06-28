@@ -53,7 +53,8 @@
     # apps
     steam
     vesktop
-	firefox
+    sabnzbd
+    firefox
     brave
     qbittorrent
     spotify
