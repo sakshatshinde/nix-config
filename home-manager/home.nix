@@ -89,6 +89,11 @@
     # alacritty
     # waybar
 
+	# dev stuff
+	nil # Nix language server
+	nix-info
+	nixpkgs-fmt
+	    
     # Fonts
     jetbrains-mono
     nerdfonts
@@ -137,9 +142,27 @@
 
   programs.vscode = {
       enable = true;
-      package = pkgs.vscode.fhs;
+      package = pkgs.vscode.fhsWithPackages (ps: with ps; [ gcc rustup zlib openssl.dev pkg-config ]);
   };
 
+	# https://nixos.asia/en/direnv
+  programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+      config.global = {
+        # Make direnv messages less verbose
+        hide_env_diff = true;
+      };
+    };
+
+    # Better `cat`
+    programs.bat.enable = true;
+    # Type `z <pat>` to cd to some directory
+    programs.zoxide.enable = true;
+    # Type `<ctrl> + r` to fuzzy search your shell history
+    programs.fzf.enable = true;
+    programs.jq.enable = true;
+    
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
