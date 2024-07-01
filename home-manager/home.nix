@@ -72,16 +72,17 @@
     blueman
     dunst
     fd
+	eza
     btop
-    grim
-    slurp
+    grim # screenshot
+    slurp # screenshot
     cosmic-edit
     cosmic-files
     dolphin
     kdePackages.breeze-icons
     kdePackages.ark
     brightnessctl
-    gammastep
+    gammastep # nightlight
     powertop
     swaybg
         
@@ -144,16 +145,6 @@
       enable = true;
       package = pkgs.vscode.fhsWithPackages (ps: with ps; [ gcc rustup zlib openssl.dev pkg-config ]);
   };
-
-	# https://nixos.asia/en/direnv
-  programs.direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-      config.global = {
-        # Make direnv messages less verbose
-        hide_env_diff = true;
-      };
-    };
 
     # Better `cat`
     programs.bat.enable = true;
