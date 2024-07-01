@@ -47,7 +47,6 @@
   };
 
   # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
   home.packages = with pkgs; [
     # apps
     steam
@@ -66,6 +65,7 @@
     wl-clipboard
     clipse
     wget
+    ripgrep
     xdg-desktop-portal
     networkmanagerapplet
     blueman
@@ -113,14 +113,19 @@
   home.file.".config/mpv/fonts/GandhiSans-Italic.otf".source = ./config/mpv/fonts/GandhiSans-Italic.otf;
   home.file.".config/mpv/fonts/GandhiSans-Bold.otf".source = ./config/mpv/fonts/GandhiSans-Bold.otf;
 
-  # Hyperland -- defining it in home-manager generates a blank .config/hypr/hyprland.conf -- so declared in configuration.nix instead
-  # wayland.windowManager.hyprland.enable = true;
-
-  # Sway
-  # wayland.windowManager.sway.enable = true;
-
-  # Enable home-manager
+  # Programs managed by HM
   programs.home-manager.enable = true;
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      ls = "eza";
+      cat = "bat";
+      grep = "ripgrep";
+      find = "fd";
+      hms = "home-manager switch --flake /home/sakshat/Dev/nix-config";
+      nixup = "sudo nixos-rebuild switch --flake /home/sakshat/Dev/nix-config";
+    };
+  };
 
   programs.git = {
     enable = true;
