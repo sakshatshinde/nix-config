@@ -1,11 +1,10 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   # You can import other home-manager modules here
   imports = [
@@ -72,7 +71,7 @@
     blueman
     dunst
     fd
-	eza
+    eza
     btop
     grim # screenshot
     slurp # screenshot
@@ -85,16 +84,16 @@
     gammastep # nightlight
     powertop
     swaybg
-        
+
     # Declared in config
     # alacritty
     # waybar
 
-	# dev stuff
-	nil # Nix language server
-	nix-info
-	nixpkgs-fmt
-	    
+    # dev stuff
+    nil # Nix language server
+    nix-info
+    nixpkgs-fmt
+
     # Fonts
     jetbrains-mono
     nerdfonts
@@ -104,7 +103,7 @@
     liberation_ttf
     fira-code
     fira-code-symbols
- ];
+  ];
 
   # mpv config the non-nix way cause lazy
   home.file.".config/mpv/mpv.conf".source = ./config/mpv/mpv.conf;
@@ -113,7 +112,7 @@
   home.file.".config/mpv/fonts/GandhiSans-BoldItalic.otf".source = ./config/mpv/fonts/GandhiSans-BoldItalic.otf;
   home.file.".config/mpv/fonts/GandhiSans-Italic.otf".source = ./config/mpv/fonts/GandhiSans-Italic.otf;
   home.file.".config/mpv/fonts/GandhiSans-Bold.otf".source = ./config/mpv/fonts/GandhiSans-Bold.otf;
-  
+
   # Hyperland -- defining it in home-manager generates a blank .config/hypr/hyprland.conf -- so declared in configuration.nix instead
   # wayland.windowManager.hyprland.enable = true;
 
@@ -125,35 +124,35 @@
 
   programs.git = {
     enable = true;
-    userName  = "sakshatshinde";
+    userName = "sakshatshinde";
     userEmail = "shindesakshat@gmail.com";
 
     aliases = {
-    	a = "add -p";
-		# expects your private key with usr perms 600 in ~/Keys dir named "github"
-		# use with GIT_SSH_COMMAND='ssh -i ~/Keys/github -o IdentitiesOnly=yes'
-    	ps = "push";
-    	p = "pull";
-    	cm = "commit -m";
-    	f = "fetch";
-    	fo = "fetch origin";
-    	st = "status";	
+      a = "add -p";
+      # expects your private key with usr perms 600 in ~/Keys dir named "github"
+      # use with GIT_SSH_COMMAND='ssh -i ~/Keys/github -o IdentitiesOnly=yes'
+      ps = "push";
+      p = "pull";
+      cm = "commit -m";
+      f = "fetch";
+      fo = "fetch origin";
+      st = "status";
     };
   };
 
   programs.vscode = {
-      enable = true;
-      package = pkgs.vscode.fhsWithPackages (ps: with ps; [ gcc rustup zlib openssl.dev pkg-config ]);
+    enable = true;
+    package = pkgs.vscode.fhsWithPackages (ps: with ps; [ gcc rustup zlib openssl.dev pkg-config ]);
   };
 
-    # Better `cat`
-    programs.bat.enable = true;
-    # Type `z <pat>` to cd to some directory
-    programs.zoxide.enable = true;
-    # Type `<ctrl> + r` to fuzzy search your shell history
-    programs.fzf.enable = true;
-    programs.jq.enable = true;
-    
+  # Better `cat`
+  programs.bat.enable = true;
+  # Type `z <pat>` to cd to some directory
+  programs.zoxide.enable = true;
+  # Type `<ctrl> + r` to fuzzy search your shell history
+  programs.fzf.enable = true;
+  programs.jq.enable = true;
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

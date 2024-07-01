@@ -1,11 +1,10 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, lib
+, config
+, pkgs
+, ...
 }: {
   # You can import other NixOS modules here
   imports = [
@@ -37,49 +36,51 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
-      
+
       # Enable all firmwares mostly for battery life
       hardware.enableAllFirmware = true;
       hardware.cpu.intel.updateMicrocode = true;
       hardware.enableRedistributableFirmware = true;
       hardware.firmware = with pkgs; [ firmwareLinuxNonfree ];
-      
+
       # Enable firmware update service
       services.fwupd.enable = true;
     };
   };
 
-  nix = let
-    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-    settings = {
-      # Enable flakes and new 'nix' command
-      experimental-features = "nix-command flakes";
-      
-      # Opinionated: disable global registry
-      flake-registry = "";
-      
-      # Workaround for https://github.com/NixOS/nix/issues/9574
-      nix-path = config.nix.nixPath;
+  nix =
+    let
+      flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+    in
+    {
+      settings = {
+        # Enable flakes and new 'nix' command
+        experimental-features = "nix-command flakes";
+
+        # Opinionated: disable global registry
+        flake-registry = "";
+
+        # Workaround for https://github.com/NixOS/nix/issues/9574
+        nix-path = config.nix.nixPath;
+
+        # gc
+        auto-optimise-store = true;
+
+      };
+      # Opinionated: disable channels
+      channel.enable = false;
 
       # gc
-      auto-optimise-store = true;
-      
-    };
-    # Opinionated: disable channels
-    channel.enable = false;
+      gc = {
+        automatic = true;
+        dates = "weekly";
+        options = "--delete-older-than 30d";
+      };
 
-    # gc
-    gc = {
-    	automatic = true;
-    	dates = "weekly";
-    	options = "--delete-older-than 30d";
+      # Opinionated: make flake registry and nix path match flake inputs
+      registry = lib.mapAttrs (_: flake: { inherit flake; }) flakeInputs;
+      nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
     };
-
-    # Opinionated: make flake registry and nix path match flake inputs
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-  };
 
   # Bootloader == systemd
   boot.loader.systemd-boot.enable = true;
@@ -103,12 +104,12 @@
   # Save some power - https://nixos.wiki/wiki/Laptop
   services.thermald.enable = true;
   powerManagement.powertop.enable = true;
-  
+
   # Networking via wpa_supplicant
   # networking.hostName = "nixos";
   # networking.wireless.enable = true;
   # networking.wireless.networks.<SSID>.psk = "<psk>";
-  
+
   # Networking via nmcli
   networking.networkmanager.enable = true;
 
@@ -121,14 +122,14 @@
 
   # Intel GPU Drivers
   hardware.graphics = {
-   enable = true;
+    enable = true;
 
-   extraPackages = with pkgs; [
-    #intel-media-driver -- bad for browsers both firefox and chrome
-    #intel-media-sdk
-    intel-vaapi-driver # older but better
-    libvdpau-va-gl
-   ];
+    extraPackages = with pkgs; [
+      #intel-media-driver -- bad for browsers both firefox and chrome
+      #intel-media-sdk
+      intel-vaapi-driver # older but better
+      libvdpau-va-gl
+    ];
   };
 
   # Locale and stuff
@@ -170,10 +171,10 @@
 
   services.pipewire.wireplumber.extraConfig = {
     "monitor.bluez.properties" = {
-        "bluez5.enable-sbc-xq" = true;
-        "bluez5.enable-msbc" = true;
-        "bluez5.enable-hw-volume" = true;
-        "bluez5.roles" = [ "hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag" ];
+      "bluez5.enable-sbc-xq" = true;
+      "bluez5.enable-msbc" = true;
+      "bluez5.enable-hw-volume" = true;
+      "bluez5.roles" = [ "hsp_hs" "hsp_ag" "hfp_hf" "hfp_ag" ];
     };
   };
 
@@ -191,7 +192,7 @@
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = ["wheel" "networkmanager"];
+      extraGroups = [ "wheel" "networkmanager" ];
     };
   };
 
