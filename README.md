@@ -1,4 +1,9 @@
-# My NixOS config
+## Dots of mine ... NixOS ... Hyprland ... Wayland ... Waybar ... 
+
+![NixOS_Banner](https://github.com/sakshatshinde/nix-config/assets/30901276/bda7b5aa-8502-4ddf-8dd1-bc8ceb8265ce)
+
+![Screenshot-2024-07-01_08:21:57](https://github.com/sakshatshinde/nix-config/assets/30901276/b6023a42-e39a-4751-99ab-bf8089b484cf)
+![Screenshot-2024-07-01_08:30:13](https://github.com/sakshatshinde/nix-config/assets/30901276/4704dfb6-994e-4d96-beeb-43bdbf506581)
 
 Refer https://wiki.archlinux.org/title/wpa_supplicant for wireless install or use nmcli
 
