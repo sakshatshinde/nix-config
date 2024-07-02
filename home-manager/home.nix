@@ -93,6 +93,7 @@
     nil # Nix language server
     nix-info
     nixpkgs-fmt
+	alejandra
 
     # Fonts
     jetbrains-mono
