@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   # https://github.com/alacritty/alacritty-theme/tree/master/themes
   programs.alacritty.enable = true;
 

@@ -1,10 +1,11 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{ inputs
-, lib
-, config
-, pkgs
-, ...
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
 }: {
   # You can import other home-manager modules here
   imports = [
@@ -93,7 +94,7 @@
     nil # Nix language server
     nix-info
     nixpkgs-fmt
-	alejandra
+    alejandra
 
     # Fonts
     jetbrains-mono
@@ -148,7 +149,7 @@
 
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode.fhsWithPackages (ps: with ps; [ gcc rustup zlib openssl.dev pkg-config ]);
+    package = pkgs.vscode.fhsWithPackages (ps: with ps; [gcc rustup zlib openssl.dev pkg-config]);
   };
 
   # Better `cat`
@@ -169,8 +170,6 @@
   #    BROWSER = "firefox";
   #    TERMINAL = "alacritty";
   #};
-
-
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "24.05";
