@@ -106,7 +106,7 @@
   swapDevices = [
     {
       device = "/swapfile";
-      size = 16 * 1024;
+      size = 6 * 1024; # 6 Gigs
     }
   ];
   zramSwap.enable = true;
