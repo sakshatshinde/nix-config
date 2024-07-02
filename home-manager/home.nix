@@ -85,7 +85,8 @@
     gammastep # nightlight
     powertop
     swaybg
-
+	nwg-look
+	
     # Declared in config
     # alacritty
     # waybar

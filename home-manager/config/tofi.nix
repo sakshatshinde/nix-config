@@ -14,14 +14,13 @@
     background-color = "#1e1e2e";
 
     outline-width = 0;
-    prompt-text = "launch";
-    placeholder-text = "app";
+    prompt-text = "run";
     border-width = "0";
 
     hide-cursor = true;
     ascii-input = true;
-    num-results = 10;
-    width = "40%";
-    height = "30%";
+    num-results = 5;
+    width = "50%";
+    height = "40%";
   };
 }
