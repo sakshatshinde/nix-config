@@ -12,13 +12,13 @@
     background-color = "#1e1e2e";
 
     outline-width = 0;
-    prompt-text = "";
+    prompt-text = "launch";
     placeholder-text = "app";
     border-width = "0";
 
     hide-cursor = true;
     ascii-input = true;
-    num-results = 3;
+    num-results = 10;
     width = "40%";
     height = "30%";
   };

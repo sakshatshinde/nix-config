@@ -36,15 +36,6 @@
     config = {
       # Disable if you don't want unfree packages
       allowUnfree = true;
-
-      # Enable all firmwares mostly for battery life
-      hardware.enableAllFirmware = true;
-      hardware.cpu.intel.updateMicrocode = true;
-      hardware.enableRedistributableFirmware = true;
-      hardware.firmware = with pkgs; [ firmwareLinuxNonfree ];
-
-      # Enable firmware update service
-      services.fwupd.enable = true;
     };
   };
 
@@ -119,6 +110,17 @@
     size = 16 * 1024;
   }];
   zramSwap.enable = true;
+
+
+  # Enable all firmwares mostly for battery life
+  hardware.enableAllFirmware = true;
+  hardware.cpu.intel.updateMicrocode = true;
+  hardware.enableRedistributableFirmware = true;
+  hardware.firmware = with pkgs; [ firmwareLinuxNonfree ];
+  # Use https://github.com/fwupd/fwupd
+  # fwupdmgr get-updates # list updates
+  # fwupdmgr update # performs firmware update
+  services.fwupd.enable = true;
 
   # Intel GPU Drivers
   hardware.graphics = {

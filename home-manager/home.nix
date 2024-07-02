@@ -118,7 +118,7 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      ls = "eza";
+      ls = "eza --icons=always";
       cat = "bat";
       grep = "ripgrep";
       find = "fd";
