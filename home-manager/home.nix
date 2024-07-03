@@ -96,7 +96,8 @@
     nix-info
     nixpkgs-fmt
     alejandra
-
+	vscode
+	
     # Fonts
     jetbrains-mono
     nerdfonts
@@ -146,11 +147,6 @@
       fo = "fetch origin";
       st = "status";
     };
-  };
-
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscode.fhsWithPackages (ps: with ps; [gcc rustup zlib openssl.dev pkg-config]);
   };
 
   # Better `cat`
