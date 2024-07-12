@@ -85,8 +85,8 @@
     gammastep # nightlight
     powertop
     swaybg
-	nwg-look
-	
+    nwg-look
+
     # Declared in config
     # alacritty
     # waybar
@@ -97,7 +97,7 @@
     nixpkgs-fmt
     alejandra
     zed-editor
-    	
+
     # Fonts
     jetbrains-mono
     nerdfonts
@@ -128,7 +128,7 @@
       find = "fd";
       hms = "home-manager switch --flake /home/sakshat/Dev/nix-config";
       nixup = "sudo nixos-rebuild switch --flake /home/sakshat/Dev/nix-config";
-	  dev = "cd ~/Dev/"
+      dev = "cd ~/Dev/";
     };
   };
 
