@@ -96,8 +96,8 @@
     nix-info
     nixpkgs-fmt
     alejandra
-	vscode
-	
+    zed-editor
+    	
     # Fonts
     jetbrains-mono
     nerdfonts
@@ -128,6 +128,7 @@
       find = "fd";
       hms = "home-manager switch --flake /home/sakshat/Dev/nix-config";
       nixup = "sudo nixos-rebuild switch --flake /home/sakshat/Dev/nix-config";
+	  dev = "cd ~/Dev/"
     };
   };
 
