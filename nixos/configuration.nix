@@ -144,14 +144,16 @@
   # ENV varibales
   environment.sessionVariables = {
     TERMINAL = "alacritty";
-    EDITOR = "micro";
+    EDITOR = "zed";
     BROWSER = "firefox";
+    XDG_UTILS_DEFAULT_VIDEO_PLAYER = "mpv";
   };
 
   # Polkit - required for hyprland
   security.polkit.enable = true;
 
   programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
   programs.gamemode.enable = true;
 
   # Bluetooth
