@@ -79,7 +79,11 @@
   boot.initrd.verbose = false;
   boot.consoleLogLevel = 0;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # mainline latest
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # zen kernel latest
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   # Dynamic linking
   programs.nix-ld.enable = true;
