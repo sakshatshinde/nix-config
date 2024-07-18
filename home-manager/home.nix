@@ -17,6 +17,7 @@
     ./config/alacritty.nix
     ./config/waybar.nix
     ./config/tofi.nix
+    ./config/dunst.nix
   ];
 
   nixpkgs = {
@@ -70,7 +71,7 @@
     xdg-desktop-portal
     networkmanagerapplet
     blueman
-    dunst
+    # dunst
     fd
     eza
     btop
